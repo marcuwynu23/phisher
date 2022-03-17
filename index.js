@@ -21,11 +21,14 @@ app.use(session({
   saveUninitialized: false,
   resave: false
 }))
+app.use(express.static(path.join(__dirname,'public')))
+
+
+
 
 app.get("/",phisher.phisherGET)
 app.post("/",phisher.phisherPOST)
 
-app.use(express.static(path.join(__dirname,'public')))
 
 const PORT = 9000;
 app.listen(process.env.PORT|PORT,(err)=>{

